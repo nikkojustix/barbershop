@@ -1,2 +1,62 @@
-@import 'vars';
-@import 'fonts';
+@import "vars";
+@import "fonts";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: $white;
+}
+
+.containter {
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.title {
+}
+
+.list {
+  list-style-type: none;
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__item + &__item {
+    margin-left: 60px;
+    font-weight: 500;
+  }
+}
+
+.header {
+  background-image: url("../images/top-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__topbar {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+  }
+
+  &__phone {
+    font-weight: 500;
+  }
+}
