@@ -11,11 +11,12 @@
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 18px;
-  line-height: 140%;
+  line-height: 100%;
   color: $white;
+  background-color: #343332;
 }
 
-.containter {
+.container {
   max-width: 1248px;
   margin: 0 auto;
   padding: 0 15px;
@@ -27,6 +28,17 @@
 }
 
 .title {
+  font-family: 'Lora';
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $golden;
+}
+
+.btn {
+  color: $golden;
+  font-weight: 600;
+  font-size: 20px;
+  padding-right: 41px;
 }
 
 .list {
@@ -38,7 +50,7 @@
     display: flex;
   }
 
-  &__item + &__item {
+  &__item+&__item {
     margin-left: 60px;
     font-weight: 500;
   }
@@ -58,5 +70,47 @@
 
   &__phone {
     font-weight: 500;
+  }
+
+  &__top-screen {
+    padding-top: 171px;
+    padding-bottom: 276px;
+  }
+
+  &__pretitle,
+  &__tagline {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+  }
+
+  &__title {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 72px;
+  }
+
+  &__tagline {
+    margin-left: 113px;
+    max-width: 335px;
+  }
+
+  &__btn {
+    display: inline-block;
+    position: relative;
+    margin: 50px 0 0 113px;
+    border: 2px solid $golden;
+    padding: 20px 82px 21px 41px;
+
+    &::after {
+      position: absolute;
+      content: url('../images/arrow-btn.svg');
+      // background-image: url('../images/arrow-btn.svg');
+      width: 26px;
+      height: 18px;
+      right: 41px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 }

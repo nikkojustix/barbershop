@@ -1,55 +1,98 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Old Brothers</title>
-    <link rel="stylesheet" href="css/style.min.css" />
-  </head>
 
-  <body class="page">
-    <header class="header">
-      <div class="containter">
-        <div class="header__inner">
-          <div class="header__topbar">
-            <nav class="menu header__menu">
-              <ul class="menu__list list">
-                <li class="menu__item">
-                  <a class="menu__link link" href="#about">О нас</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link link" href="#services">Услуги</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link link" href="#barbers">Барберы</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link link" href="#feedback">Отзывы</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link link" href="#galery">Галерея</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link link" href="#contacts">Контакты</a>
-                </li>
-              </ul>
-            </nav>
-            <a class="header__phone link" href="tel:+74957774888"
-              >+7 (495) 777-4-888</a
-            >
-          </div>
-          <div class="header__top-screen">
-            <h3 class="header__pretitle">Барбершоп</h3>
-            <h1 class="header__title title">OLD BROTHERS</h1>
-            <h3 class="header__tagline">
-              Больше, чем просто мужская парикмахерская
-            </h3>
-            <a class="header__btn btn link" href="#">Записаться</a>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Old Brothers v0.02</title>
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body class="page">
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__topbar">
+          <nav class="menu header__menu">
+            <ul class="menu__list list">
+              <li class="menu__item">
+                <a class="menu__link link" href="#about">О нас</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link link" href="#services">Услуги</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link link" href="#barbers">Барберы</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link link" href="#feedback">Отзывы</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link link" href="#galery">Галерея</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="header__phone link" href="tel:+74957774888">+7 (495) 777-4-888</a>
+        </div>
+        <div class="header__top-screen">
+          <h5 class="header__pretitle">Барбершоп</h5>
+          <h1 class="header__title title">OLD BROTHERS</h1>
+          <h5 class="header__tagline">
+            Больше, чем просто мужская парикмахерская
+          </h5>
+          <a class="header__btn btn link" href="#sign-up">Записаться</a>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <script src="js/main.min.js"></script>
-  </body>
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__inner">
+        <h2 class="about__title title">
+          OLD BROTHERS
+          <span class="about__tagline">барбершоп</span>
+          <span class="about__tagline">с твоим характером</span>
+        </h2>
+        <p class="about__descr"><span class="about__descr about__descr--green">Old Brothers barbershop</span> — это
+          намного больше,чем просто мужская парикмахерская. Это
+          место,где вам помогут найти свой собственный стиль.</p>
+      </div>
+    </div>
+    <div class="about__video"></div>
+  </section>
+
+  <section id="pros" class="pros">
+    <div class="container">
+      <div class="pros__list">
+        <div class="pros__item">
+          <h5 class="pros__title">Качество</h5>
+          <p class="pros__descr">Команда квалифицированных мастеров</p>
+        </div>
+        <div class="pros__item">
+          <h5 class="pros__title">Кофе и чай</h5>
+          <p class="pros__descr">Предложим вам чай или кофе во время ожидания</p>
+        </div>
+        <div class="pros__item">
+          <h5 class="pros__title">wi-fi</h5>
+          <p class="pros__descr">У нас высокоскоростной бесплатный интернет</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div id="sign-up" class="sign-up mfp-hide">
+    <form class="sign-up__form" action="">
+      <input class="sign-up__name" type="text">
+      <input class="sign-up__phone" type="tel">
+      <button class="sign-up__btn btn" type="submit">Записаться</button>
+    </form>
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
 </html>
