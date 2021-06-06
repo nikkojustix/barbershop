@@ -5,9 +5,11 @@ $(function () {
   $servicesBtn = $('.services__btn');
   $menuBtn = $('.menu__btn');
   $menuBtnLine = $('.menu__btn-line');
+  $menuList = $('.menu__list');
 
   $menuBtn.on('click', function(){
     $menuBtnLine.toggleClass('menu__btn-line--opened');
+    $menuList.slideToggle();
   });
 
   $videoBtn.on('click', function() {

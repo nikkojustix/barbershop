@@ -51,4 +51,27 @@
 }
 
 @media (max-width: 767px) {
+  .menu {
+    &__btn {
+      display: block;
+    }
+
+    &__list {
+      display: none;
+      position: absolute;
+      top: 30px;
+      right: 35%;
+      left: 35%;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 0;
+    }
+
+    &__link {
+      display: block;
+      padding: 10px;
+      text-align: center;
+    }
+  }
 }

@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: $white;
@@ -26,7 +26,7 @@ body {
   color: inherit;
   transition: 0.3s ease;
   &:hover {
-    filter: brightness(80%);
+    color: $green;
   }
 }
 
@@ -45,16 +45,39 @@ body {
   font-weight: 600;
   font-size: 20px;
   padding-right: 82px;
+  text-decoration: none;
+  transition: all 0.3s;
 
-  &::after {
+  &::after,
+  &::before {
     position: absolute;
-    content: url("../images/arrow-btn.svg");
-    // background-image: url('../images/arrow-btn.svg');
     width: 26px;
     height: 18px;
     right: 41px;
     top: 50%;
     transform: translateY(-50%);
+    transition: all 0.3s;
+  }
+
+  &::before {
+    content: url("../images/arrow-btn.svg");
+  }
+
+  &::after {
+    content: url("../images/arrow-btn-green.svg");
+    opacity: 0;
+  }
+
+  &:hover {
+    color: $green;
+
+    &::before {
+      opacity: 0;
+    }
+
+    &::after {
+      opacity: 1;
+    }
   }
 }
 
@@ -73,48 +96,52 @@ body {
   }
 
   &__btn {
+    display: none;
     background-color: transparent;
     border: none;
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 22px;
     position: relative;
     cursor: pointer;
+
+    &:hover .menu__btn-line {
+      background-color: $green;
+    }
   }
   &__btn-line {
     position: absolute;
-    height: 4px;
-    border-radius: 2px;
-    background-color: $white;
+    height: 2px;
+    background-color: $golden;
     transition: all 0.3s;
     &:nth-child(1) {
-      top: 2px;
+      top: 0px;
       left: 0;
       width: 50%;
     }
     &:nth-child(2) {
-      top: 14px;
+      top: 10px;
       left: 0;
       width: 100%;
     }
     &:nth-child(3) {
-      top: 26px;
+      top: 20px;
       left: 50%;
       width: 50%;
     }
 
     &--opened {
       &:nth-child(1) {
-        top: 8px;
+        top: 5px;
         left: 2px;
         transform: rotate(45deg);
       }
       &:nth-child(2) {
-        top: 14px;
+        top: 10px;
         left: 0;
         transform: rotate(-45deg);
       }
       &:nth-child(3) {
-        top: 20px;
+        top: 15px;
         left: calc(50% - 2px);
         transform: rotate(45deg);
       }
@@ -181,7 +208,7 @@ body {
 
   &__btn {
     margin: 50px 0 0 110px;
-    border: 2px solid $golden;
+    border: 2px solid currentColor;
     padding: 21px 82px 22px 41px;
   }
 }
