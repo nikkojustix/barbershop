@@ -15,6 +15,10 @@ body {
   background-color: #343332;
 }
 
+.wrapper--disable {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1248px;
   margin: 0 auto;
@@ -36,49 +40,6 @@ body {
   font-size: 48px;
   text-transform: uppercase;
   color: $golden;
-}
-
-.btn {
-  position: relative;
-  display: inline-block;
-  color: $golden;
-  font-weight: 600;
-  font-size: 20px;
-  padding-right: 82px;
-  text-decoration: none;
-  transition: all 0.3s;
-
-  &::after,
-  &::before {
-    position: absolute;
-    width: 26px;
-    height: 18px;
-    right: 41px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.3s;
-  }
-
-  &::before {
-    content: url("../images/arrow-btn.svg");
-  }
-
-  &::after {
-    content: url("../images/arrow-btn-green.svg");
-    opacity: 0;
-  }
-
-  &:hover {
-    color: $green;
-
-    &::before {
-      opacity: 0;
-    }
-
-    &::after {
-      opacity: 1;
-    }
-  }
 }
 
 .list {
@@ -151,13 +112,12 @@ body {
 
 .header {
   position: relative;
-  min-height: 850px;
-  height: 100vh;
   background-image: url("../images/top-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   z-index: 0;
+  height: 100vh;
 
   &::after {
     position: absolute;
@@ -184,8 +144,7 @@ body {
   }
 
   &__top-screen {
-    padding-top: 171px;
-    padding-bottom: 256px;
+    padding-top: 20vh;
   }
 
   &__pretitle,
@@ -210,6 +169,49 @@ body {
     margin: 50px 0 0 110px;
     border: 2px solid currentColor;
     padding: 21px 82px 22px 41px;
+  }
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  color: $golden;
+  font-weight: 600;
+  font-size: 20px;
+  padding-right: 82px;
+  text-decoration: none;
+  transition: all 0.3s;
+
+  &::after,
+  &::before {
+    position: absolute;
+    width: 26px;
+    height: 18px;
+    right: 41px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s;
+  }
+
+  &::before {
+    content: url("../images/arrow-btn.svg");
+  }
+
+  &::after {
+    content: url("../images/arrow-btn-green.svg");
+    opacity: 0;
+  }
+
+  &:hover {
+    color: $green;
+
+    &::before {
+      opacity: 0;
+    }
+
+    &::after {
+      opacity: 1;
+    }
   }
 }
 

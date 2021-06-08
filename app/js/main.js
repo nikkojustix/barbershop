@@ -9,7 +9,8 @@ $(function () {
 
   $menuBtn.on('click', function(){
     $menuBtnLine.toggleClass('menu__btn-line--opened');
-    $menuList.slideToggle();
+    $menuList.toggleClass('menu__list--opened');
+    $('.wrapper').toggleClass('wrapper--disable');
   });
 
   $videoBtn.on('click', function() {
