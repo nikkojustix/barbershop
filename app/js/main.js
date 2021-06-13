@@ -1,5 +1,5 @@
 $(function () {
-  $videoBtn  = $('.video__btn');
+  $videoBtn = $('.video__btn');
   $videoPlayer = $('.video__player');
   $video = $('.video');
   $servicesBtn = $('.services__btn');
@@ -7,30 +7,30 @@ $(function () {
   $menuBtnLine = $('.menu__btn-line');
   $menuList = $('.menu__list');
 
-  $menuBtn.on('click', function(){
+  $menuBtn.on('click', function () {
     $menuBtnLine.toggleClass('menu__btn-line--opened');
     $menuList.toggleClass('menu__list--opened');
     $('.wrapper').toggleClass('wrapper--disable');
   });
 
-  $videoBtn.on('click', function() {
-  if($videoPlayer.get(0).paused) {
-    $videoPlayer.get(0).play();
-    $videoBtn.addClass('video__btn--paused'); 
-  } else { 
-    $videoPlayer.get(0).pause();
-    $videoBtn.removeClass('video__btn--paused');
-  }
-});  
-
-  $video.on('mouseleave', function() {
-    if($videoBtn.hasClass('video__btn--paused')) {
-    $videoBtn.css('opacity', '0');
+  $videoBtn.on('click', function () {
+    if ($videoPlayer.get(0).paused) {
+      $videoPlayer.get(0).play();
+      $videoBtn.addClass('video__btn--paused');
+    } else {
+      $videoPlayer.get(0).pause();
+      $videoBtn.removeClass('video__btn--paused');
     }
   });
-  $video.on('mouseenter', function() {
-    if($videoBtn.hasClass('video__btn--paused')) {
-    $videoBtn.css('opacity', '1');
+
+  $video.on('mouseleave', function () {
+    if ($videoBtn.hasClass('video__btn--paused')) {
+      $videoBtn.css('opacity', '0');
+    }
+  });
+  $video.on('mouseenter', function () {
+    if ($videoBtn.hasClass('video__btn--paused')) {
+      $videoBtn.css('opacity', '1');
     }
   });
 
@@ -40,21 +40,16 @@ $(function () {
     speed: 600,
     slidesToShow: 3,
     slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
+    responsive: [{
+        breakpoint: 768,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
+          slidesToShow: 2
         }
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToShow: 2
         }
       },
       {
@@ -67,10 +62,10 @@ $(function () {
     ]
   });
 
-  $servicesBtn.on('click', function(){
+  $servicesBtn.on('click', function () {
     $(this).toggleClass('services__btn--opened')
-    .prev().children('.services__item-title').toggleClass('services__item-title--golden')
-    .next().toggleClass('services__price-list--opened');
+      .prev().children('.services__item-title').toggleClass('services__item-title--golden')
+      .next().toggleClass('services__price-list--opened');
     // $(this).prev().children('.services__item-title').toggleClass('services__item-title--golden');
     $(this).parent().toggleClass('services__item--opened');
   });
@@ -81,8 +76,7 @@ $(function () {
     speed: 600,
     slidesToShow: 3,
     slidesToScroll: 3,
-    responsive: [
-      {
+    responsive: [{
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
@@ -114,8 +108,7 @@ $(function () {
     speed: 600,
     slidesToShow: 3,
     slidesToScroll: 3,
-    responsive: [
-      {
+    responsive: [{
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
