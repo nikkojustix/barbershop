@@ -190,6 +190,14 @@ body {
   text-decoration: none;
   transition: all 0.3s;
 
+  &__arrow {
+    display: inline-block;
+    width: 26px;
+    height: 18px;
+    margin-left: 15px;
+    background-image: url(../images/arrow-btn.svg);
+  }
+
   &::after,
   &::before {
     position: absolute;
@@ -243,7 +251,7 @@ body {
     text-transform: none;
   }
 
-  &__tagline+&__tagline {
+  &__tagline + &__tagline {
     margin-left: 110px;
   }
 
@@ -338,7 +346,6 @@ body {
     }
 
     .slick {
-
       &-prev,
       &-next {
         top: 187px;
@@ -599,7 +606,7 @@ body {
       transform: scaleY(1);
     }
 
-    &>.price-list__item:not(:last-child) {
+    & > .price-list__item:not(:last-child) {
       margin-bottom: 25px;
     }
   }
@@ -708,7 +715,8 @@ body {
       grid-row-end: span 2;
     }
 
-    &:nth-child(5) {}
+    &:nth-child(5) {
+    }
   }
 }
 
@@ -816,7 +824,7 @@ body {
   &__menu {
     margin-bottom: 70px;
 
-    &-item+&-item {
+    &-item + &-item {
       margin-left: 80px;
     }
   }
