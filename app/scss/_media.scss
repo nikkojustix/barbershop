@@ -22,8 +22,18 @@
   }
 
   .works__slider .slick-prev,
-  .works__slider .slick-next {
+  .works__slider .slick-next,
+  .slick-prev,
+  .slick-next {
     top: -50px;
+  }
+
+  .feedback__slider .slick-prev {
+    left: 15px;
+  }
+
+  .feedback__slider .slick-next {
+    right: 15px;
   }
 }
 
@@ -73,6 +83,10 @@
     &__btn {
       right: -45px;
     }
+  }
+
+  .barbers__slider-hover {
+    padding: 80px 50px;
   }
 }
 
@@ -268,6 +282,10 @@
 }
 
 @media (max-width: 600px) {
+  .title {
+    font-size: 30px;
+  }
+
   .header {
     &::after {
       width: 100%;
@@ -318,6 +336,13 @@
       top: 220px;
       width: 24px;
       height: 24px;
+    }
+  }
+
+  .barbers,
+  .feedback {
+    &__slider {
+      padding-bottom: 0;
     }
   }
 }
