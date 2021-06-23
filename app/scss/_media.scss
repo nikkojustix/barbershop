@@ -54,6 +54,26 @@
       padding: 50px;
     }
   }
+
+  .services {
+    &__item {
+      margin: 0 45px;
+      padding-left: 20px;
+
+      &::before {
+        left: -45px;
+      }
+    }
+
+    &__img {
+      width: 350px;
+      margin-right: 50px;
+    }
+
+    &__btn {
+      right: -45px;
+    }
+  }
 }
 
 @media (max-width: 992px) {
@@ -105,8 +125,18 @@
   }
 
   .price-list {
-    margin-bottom: 50px;
     font-size: 18px;
+  }
+
+  .services {
+    &__item {
+      padding: 30px 10px;
+    }
+
+    &__img {
+      width: 300px;
+      margin-right: 25px;
+    }
   }
 }
 
@@ -207,6 +237,34 @@
       font-size: 22px;
     }
   }
+
+  .services {
+    &__item {
+      margin: 0;
+      flex-direction: column;
+      padding-left: 0;
+      padding-right: 0;
+
+      &::before {
+        left: 0;
+        top: 200px;
+      }
+    }
+
+    &__img {
+      margin: 0;
+    }
+
+    &__item-title {
+      margin-top: 18px;
+      margin-left: 85px;
+    }
+
+    &__btn {
+      right: 0;
+      top: 217px;
+    }
+  }
 }
 
 @media (max-width: 600px) {
@@ -219,7 +277,8 @@
       text-align: center;
     }
 
-    &__tagline {
+    &__tagline,
+    &__btn {
       margin-left: auto;
       margin-right: auto;
     }
@@ -238,6 +297,27 @@
 
     &__item:not(:last-child) {
       margin-bottom: 30px;
+    }
+  }
+
+  .services {
+    &__item {
+      &::before {
+        top: 208px;
+        font-size: 32px;
+      }
+    }
+
+    &__item-title {
+      font-size: 18px;
+      margin-top: 22px;
+      margin-left: 50px;
+    }
+
+    &__btn {
+      top: 220px;
+      width: 24px;
+      height: 24px;
     }
   }
 }

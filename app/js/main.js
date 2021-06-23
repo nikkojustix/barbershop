@@ -47,16 +47,9 @@ $(function () {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 625,
         settings: {
-          slidesToShow: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToShow: 1
         }
       }
     ]
@@ -65,7 +58,8 @@ $(function () {
   $servicesBtn.on('click', function () {
     $(this).toggleClass('services__btn--opened')
       .prev().children('.services__item-title').toggleClass('services__item-title--golden')
-      .next().toggleClass('services__price-list--opened');
+      //.next().toggleClass('services__price-list--opened');
+      .next().slideToggle();
     // $(this).prev().children('.services__item-title').toggleClass('services__item-title--golden');
     $(this).parent().toggleClass('services__item--opened');
   });
