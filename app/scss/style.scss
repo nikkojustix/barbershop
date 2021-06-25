@@ -703,17 +703,17 @@ body {
     align-items: center;
   }
 
-  &__icon {
-    cursor: pointer;
+  &__link {
     transition: all 0.3s;
+    margin: 0 75px;
+
+    &:first-child {
+      transform: rotateZ(45deg) translateY(-10px);
+    }
 
     &:hover {
       filter: contrast(0.75) brightness(0.9);
     }
-  }
-
-  &__icon:not(:last-child) {
-    margin-right: 150px;
   }
 }
 

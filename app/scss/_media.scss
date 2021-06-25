@@ -152,6 +152,12 @@
       margin-right: 25px;
     }
   }
+
+  .social {
+    &__link {
+      margin: 0 50px;
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -293,6 +299,16 @@
         "img4 img4";
     }
   }
+
+  .social {
+    &__link {
+      height: 60px;
+    }
+
+    &__icon {
+      height: 100%;
+    }
+  }
 }
 
 @media (max-width: 600px) {
@@ -369,6 +385,13 @@
         "img1 img3"
         "img4 img4"
         "img5 img5";
+    }
+  }
+
+  .social {
+    &__link {
+      margin: 0 20px;
+      height: 35px;
     }
   }
 }
