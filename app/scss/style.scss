@@ -695,7 +695,6 @@ body {
 }
 
 .social {
-  margin-bottom: 120px;
 
   &__inner {
     display: flex;
@@ -719,8 +718,9 @@ body {
 
 .contacts {
   position: relative;
-  margin-bottom: 120px;
   background-image: url("../images/map.jpg");
+  background-position: center;
+  background-size: cover;
 
   &::after {
     position: absolute;
@@ -736,7 +736,7 @@ body {
 
   &__info {
     position: relative;
-    padding: 187px 266px 187px 43px;
+    padding: 187px 43px;
     z-index: 1;
   }
 
@@ -745,12 +745,6 @@ body {
 
     &:nth-child(1) {
       margin-bottom: 110px;
-
-      &::before {
-        position: absolute;
-        content: url("../images/location-icon.svg");
-        left: -43px;
-      }
 
       &::after {
         position: absolute;
@@ -763,14 +757,6 @@ body {
       }
     }
 
-    &:nth-child(2) {
-      &::before {
-        position: absolute;
-        content: url("../images/phone-icon.svg");
-        left: -43px;
-      }
-    }
-
     &-title {
       font-size: 20px;
       font-weight: 700;
@@ -778,12 +764,31 @@ body {
       margin-bottom: 20px;
       display: block;
       color: $gray1;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: url("../images/location-icon.svg");
+        left: -43px;
+      }
     }
 
     &-text {
       line-height: 140%;
       color: #bdbdbd;
     }
+  }
+
+  &__tel {
+    &::before {
+      position: absolute;
+      content: url("../images/phone-icon.svg");
+      left: -43px;
+    }
+  }
+
+  &__small-map {
+    display: none;
   }
 }
 

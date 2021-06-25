@@ -88,6 +88,12 @@
   .barbers__slider-hover {
     padding: 80px 50px;
   }
+
+  .contacts {
+    &__info {
+      padding: 100px 43px;
+    }
+  }
 }
 
 @media (max-width: 992px) {
@@ -156,6 +162,18 @@
   .social {
     &__link {
       margin: 0 50px;
+    }
+  }
+
+  .contacts {
+    &__adres {
+      &:nth-child(1) {
+        margin-bottom: 50px;
+
+        &::after {
+          bottom: -25px;
+        }
+      }
     }
   }
 }
@@ -309,6 +327,16 @@
       height: 100%;
     }
   }
+
+  .contacts {
+    &__info {
+      padding: 43px;
+    }
+
+    &__adres-text {
+      margin-left: -43px;
+    }
+  }
 }
 
 @media (max-width: 600px) {
@@ -392,6 +420,44 @@
     &__link {
       margin: 0 20px;
       height: 35px;
+    }
+  }
+
+  .contacts {
+    background: none;
+
+    &::after {
+      content: none;
+    }
+
+    &__info {
+      text-align: center;
+      padding: 0;
+    }
+
+    &__adres {
+      &:nth-child(1) {
+        margin-bottom: 30px;
+
+        &::after {
+          content: none;
+        }
+      }
+    }
+
+    &__adres-title::before {
+      left: 5%;
+    }
+
+    &__adres-text {
+      margin: 0;
+    }
+
+    &__small-map {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      margin: 20px auto 0;
     }
   }
 }
