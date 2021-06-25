@@ -803,8 +803,13 @@ body {
   &__menu {
     margin-bottom: 70px;
 
-    &-item+&-item {
-      margin-left: 80px;
+    &-list {
+      display: flex;
+    }
+
+    &-item:not(:last-child) {
+      margin-right: 80px;
+      font-weight: 500;
     }
   }
 
