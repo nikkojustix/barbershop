@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -127,7 +131,7 @@ body {
   font-weight: 600;
   font-size: 20px;
   text-decoration: none;
-  transition: color .3s;
+  transition: color 0.3s;
 
   &__arrow {
     display: inline-block;
@@ -135,7 +139,7 @@ body {
     height: 18px;
     margin-left: 15px;
     background-image: url(../images/arrow-btn.svg);
-    transition: background-image .3s;
+    transition: background-image 0.3s;
   }
 
   &:hover {
@@ -230,7 +234,7 @@ body {
     text-transform: none;
   }
 
-  &__tagline+&__tagline {
+  &__tagline + &__tagline {
     margin-left: 110px;
   }
 
@@ -325,7 +329,6 @@ body {
     }
 
     .slick {
-
       &-prev,
       &-next {
         top: 187px;
@@ -498,7 +501,6 @@ body {
     padding: 50px 20px 50px 40px;
     border-top: 1px solid #828282;
 
-
     &::before {
       position: absolute;
       counter-increment: li;
@@ -538,7 +540,7 @@ body {
     font-size: 24px;
     line-height: 140%;
     text-transform: uppercase;
-    transition: .3s;
+    transition: 0.3s;
     color: $gray1;
 
     &--golden {
@@ -559,7 +561,7 @@ body {
     cursor: pointer;
     outline: none;
     transform: rotate(-90deg);
-    transition: .3s;
+    transition: 0.3s;
 
     &--opened {
       transform: rotate(0);
@@ -573,7 +575,7 @@ body {
     margin-top: 31px;
     display: none;
 
-    &>.price-list__item:not(:last-child) {
+    & > .price-list__item:not(:last-child) {
       margin-bottom: 25px;
     }
   }
@@ -695,7 +697,6 @@ body {
 }
 
 .social {
-
   &__inner {
     display: flex;
     justify-content: center;
@@ -797,7 +798,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 116px;
   }
 
   &__menu {
