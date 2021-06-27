@@ -57,7 +57,6 @@ function images() {
 function scripts() {
   return src([
       'node_modules/jquery/dist/jquery.js',
-      'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
       'node_modules/slick-carousel/slick/slick.js',
       'app/js/main.js'
     ])
@@ -70,7 +69,6 @@ function scripts() {
 function styles() {
   return src([
       'node_modules/normalize.css/normalize.css',
-      'node_modules/magnific-popup/dist/magnific-popup.css',
       'node_modules/slick-carousel/slick/slick.css',
       'app/scss/style.scss'
     ])
